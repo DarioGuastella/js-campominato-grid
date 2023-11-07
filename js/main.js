@@ -24,6 +24,12 @@ playBtn.addEventListener("click", function() {
         let cella = creaCella(i);
         grid.appendChild(cella);
         cella.innerHTML = i;
+        if (numCelle==81) {
+            cella.classList.add("medium");
+        } else if (numCelle==49){
+            cella.classList.add("hard");
+            
+        }
     }
     
     function creaCella(numero) {
