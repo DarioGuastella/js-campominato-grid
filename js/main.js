@@ -18,7 +18,7 @@ playBtn.addEventListener("click", function() {
         cella.classList.add("square");
         // Evento per ogni cella
         cella.addEventListener("click", function() {
-            console.log("Cella selezionata", i);
+            console.log("Cella selezionata", numero);
             cella.classList.toggle("highlight");
         });
         
