@@ -8,4 +8,9 @@ for (let i = 1; i <= numCelle; i++) {
     cella.innerHTML = i;
     cella.classList.add("square");
     grid.appendChild(cella);
+
+    cella.addEventListener("click", function() {
+        console.log("Cella selezionata", i);
+        cella.classList.toggle("highlight");
+    });
 }
