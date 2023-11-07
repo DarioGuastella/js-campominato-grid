@@ -1,6 +1,4 @@
-:root {
-    --cells-per-row: 10;
-}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -46,8 +44,8 @@ footer {
 
 .square {
     border: solid 1px;
-    height: calc(100% / var(--cells-per-row) );
-    width: calc(100% / var(--cells-per-row) );
+    height: calc(100% / 10 );
+    width: calc(100% / 10 );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,4 +53,14 @@ footer {
 
 .highlight {
     background-color: teal;
+}
+
+.medium {
+    height: calc(100% / 9);
+    width: calc(100% / 9 );
+}
+
+.hard {
+    height: calc(100% / 7);
+    width: calc(100% / 7 );
 }
