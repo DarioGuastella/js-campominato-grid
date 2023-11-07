@@ -8,14 +8,21 @@ playBtn.addEventListener("click", function() {
     
     
     for (let i = 1; i <= numCelle; i++) {
-        const cella = document.createElement("div");
-        cella.innerHTML = i;
-        cella.classList.add("square");
+        let cella = creaCella(i);
         grid.appendChild(cella);
-        
+        cella.innerHTML = i;
+    }
+    
+    function creaCella(numero) {
+        const cella = document.createElement("div");
+        cella.classList.add("square");
+        // Evento per ogni cella
         cella.addEventListener("click", function() {
             console.log("Cella selezionata", i);
             cella.classList.toggle("highlight");
         });
+        
+        return cella;
+        
     }
 });
