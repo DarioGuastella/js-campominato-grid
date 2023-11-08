@@ -3,12 +3,20 @@ let difficoltà = document.getElementById("difficulty");
 difficoltà.addEventListener('change', function() {
     console.log('Hai selezionato: ', difficoltà.value);
   });
-  let numCelle = 0;
+  
+//Definisco container e pulsante di play
 
 let grid = document.getElementById("container");
 const playBtn = document.getElementById("myBtn");
 
+//Evento al click del pulsante "play"
+
 playBtn.addEventListener("click", function() {
+
+    let numCelle = 0;
+
+    //Cambio il numero di celle in base alla difficoltà selezionata.
+
     if (difficoltà.value == "Normale") {
         numCelle = 81;
         grid.innerHTML = "";
@@ -19,7 +27,10 @@ playBtn.addEventListener("click", function() {
         numCelle = 100;
         grid.innerHTML = "";
       }
-    
+
+    // Creo ogni cella una per una, richiamando la funzione, 
+    // inserendo all'interno di ogni cella il numero dell'index.
+
     for (let i = 1; i <= numCelle; i++) {
         let cella = creaCella(i);
         grid.appendChild(cella);
@@ -31,7 +42,7 @@ playBtn.addEventListener("click", function() {
             
         }
     }
-    
+    //////////////////////////FUNZIONI////////////////////////////////////
     function creaCella(numero) {
         const cella = document.createElement("div");
         cella.classList.add("square");
